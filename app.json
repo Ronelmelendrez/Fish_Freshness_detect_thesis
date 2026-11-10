@@ -1,13 +1,17 @@
 {
   "expo": {
-    "name": "Fish_fresh_detect_app",
-    "slug": "Fish_fresh_detect_app",
+    "name": "Fish Freshness Detector",
+    "slug": "fish-freshness-detector",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#F7F9FB",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "The camera is used to scan the fish's eye and skin in real time to assess freshness."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +20,17 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["CAMERA"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sharing"
+    ],
+    "experiments": {
+      "tsconfigPaths": true
     }
   }
 }
