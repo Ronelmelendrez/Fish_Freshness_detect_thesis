@@ -1,0 +1,8 @@
+node_modules/
+.expo/
+dist/
+coverage/
+*.log
+.env*.local
+npm-debug.*
+.yarn/
